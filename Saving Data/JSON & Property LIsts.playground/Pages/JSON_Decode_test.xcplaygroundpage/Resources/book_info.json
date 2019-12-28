@@ -1,0 +1,34 @@
+[
+    {
+        "bookKind":"civilization",
+        "title":"느림의 미학",
+        "author":"박현우",
+        "publisher":"행복 출판사",
+        "price":"30000"
+        
+    },
+    {
+        "bookKind":"computer",
+        "title":"jQuery Mobile",
+        "author":"홍길동",
+        "publisher":"미래 출판사",
+        "price":"25000"
+        
+    },
+    {
+        "bookKind":"novel",
+        "title":"화성에서 온 낙지",
+        "author":"이꾸민",
+        "publisher":"도서출판 망상",
+        "price":"5000"
+        
+    },
+    {
+        "bookKind":"computer",
+        "title":"XML DATABASE Programming",
+        "author":"홍길동",
+        "publisher":"행복 출판사",
+        "price":"25000"
+    }
+]
+

@@ -78,10 +78,4 @@ class EmojiTableViewController: UITableViewController {
         return cell
     }
     
-    // MARK: - Table view delegate
-    
-    
-    
-    
-    
 }

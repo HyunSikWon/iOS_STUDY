@@ -56,15 +56,23 @@
 		7E1552ED23BF1C64001C76E5 /* ScrollingFrom-Challenge */ = {
 			isa = PBXGroup;
 			children = (
-				7E1552EE23BF1C64001C76E5 /* AppDelegate.swift */,
-				7E1552F023BF1C64001C76E5 /* SceneDelegate.swift */,
 				7E1552F223BF1C64001C76E5 /* ViewController.swift */,
 				7E1552F423BF1C64001C76E5 /* Main.storyboard */,
 				7E1552F723BF1C65001C76E5 /* Assets.xcassets */,
-				7E1552F923BF1C65001C76E5 /* LaunchScreen.storyboard */,
 				7E1552FC23BF1C65001C76E5 /* Info.plist */,
+				7E3C6DAC23BF1DB60061336A /* Supporting Files */,
 			);
 			path = "ScrollingFrom-Challenge";
+			sourceTree = "<group>";
+		};
+		7E3C6DAC23BF1DB60061336A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				7E1552EE23BF1C64001C76E5 /* AppDelegate.swift */,
+				7E1552F023BF1C64001C76E5 /* SceneDelegate.swift */,
+				7E1552F923BF1C65001C76E5 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

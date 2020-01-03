@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+<<<<<<< Updated upstream
 		7EBA6E2D23BDDD5300B1191D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA6E2C23BDDD5300B1191D /* AppDelegate.swift */; };
 		7EBA6E2F23BDDD5300B1191D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA6E2E23BDDD5300B1191D /* SceneDelegate.swift */; };
 		7EBA6E3423BDDD5300B1191D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBA6E3223BDDD5300B1191D /* Main.storyboard */; };
@@ -32,6 +33,29 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		7EBA6E2623BDDD5300B1191D /* Frameworks */ = {
+=======
+		7EBA6E0D23BDDD1A00B1191D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA6E0C23BDDD1A00B1191D /* AppDelegate.swift */; };
+		7EBA6E0F23BDDD1A00B1191D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA6E0E23BDDD1A00B1191D /* SceneDelegate.swift */; };
+		7EBA6E1123BDDD1A00B1191D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA6E1023BDDD1A00B1191D /* ViewController.swift */; };
+		7EBA6E1423BDDD1A00B1191D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBA6E1223BDDD1A00B1191D /* Main.storyboard */; };
+		7EBA6E1623BDDD1B00B1191D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EBA6E1523BDDD1B00B1191D /* Assets.xcassets */; };
+		7EBA6E1923BDDD1B00B1191D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBA6E1723BDDD1B00B1191D /* LaunchScreen.storyboard */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7EBA6E0923BDDD1A00B1191D /* Meal Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meal Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7EBA6E0C23BDDD1A00B1191D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7EBA6E0E23BDDD1A00B1191D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		7EBA6E1023BDDD1A00B1191D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7EBA6E1323BDDD1A00B1191D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7EBA6E1523BDDD1B00B1191D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7EBA6E1823BDDD1B00B1191D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7EBA6E1A23BDDD1B00B1191D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7EBA6E0623BDDD1A00B1191D /* Frameworks */ = {
+>>>>>>> Stashed changes
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,6 +65,7 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+<<<<<<< Updated upstream
 		7EBA6E2023BDDD5300B1191D = {
 			isa = PBXGroup;
 			children = (
@@ -53,10 +78,25 @@
 			isa = PBXGroup;
 			children = (
 				7EBA6E2923BDDD5300B1191D /* Meal Tracker.app */,
+=======
+		7EBA6E0023BDDD1A00B1191D = {
+			isa = PBXGroup;
+			children = (
+				7EBA6E0B23BDDD1A00B1191D /* Meal Tracker */,
+				7EBA6E0A23BDDD1A00B1191D /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7EBA6E0A23BDDD1A00B1191D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7EBA6E0923BDDD1A00B1191D /* Meal Tracker.app */,
+>>>>>>> Stashed changes
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
+<<<<<<< Updated upstream
 		7EBA6E2B23BDDD5300B1191D /* Meal Tracker */ = {
 			isa = PBXGroup;
 			children = (
@@ -67,10 +107,23 @@
 				7EBA6E3523BDDD5400B1191D /* Assets.xcassets */,
 				7EBA6E4023BDDD5D00B1191D /* Supporting Files */,
 				7EBA6E3A23BDDD5400B1191D /* Info.plist */,
+=======
+		7EBA6E0B23BDDD1A00B1191D /* Meal Tracker */ = {
+			isa = PBXGroup;
+			children = (
+				7EBA6E0C23BDDD1A00B1191D /* AppDelegate.swift */,
+				7EBA6E0E23BDDD1A00B1191D /* SceneDelegate.swift */,
+				7EBA6E1023BDDD1A00B1191D /* ViewController.swift */,
+				7EBA6E1223BDDD1A00B1191D /* Main.storyboard */,
+				7EBA6E1523BDDD1B00B1191D /* Assets.xcassets */,
+				7EBA6E1723BDDD1B00B1191D /* LaunchScreen.storyboard */,
+				7EBA6E1A23BDDD1B00B1191D /* Info.plist */,
+>>>>>>> Stashed changes
 			);
 			path = "Meal Tracker";
 			sourceTree = "<group>";
 		};
+<<<<<<< Updated upstream
 		7EBA6E4023BDDD5D00B1191D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -91,6 +144,18 @@
 				7EBA6E2523BDDD5300B1191D /* Sources */,
 				7EBA6E2623BDDD5300B1191D /* Frameworks */,
 				7EBA6E2723BDDD5300B1191D /* Resources */,
+=======
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7EBA6E0823BDDD1A00B1191D /* Meal Tracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7EBA6E1D23BDDD1B00B1191D /* Build configuration list for PBXNativeTarget "Meal Tracker" */;
+			buildPhases = (
+				7EBA6E0523BDDD1A00B1191D /* Sources */,
+				7EBA6E0623BDDD1A00B1191D /* Frameworks */,
+				7EBA6E0723BDDD1A00B1191D /* Resources */,
+>>>>>>> Stashed changes
 			);
 			buildRules = (
 			);
@@ -98,25 +163,41 @@
 			);
 			name = "Meal Tracker";
 			productName = "Meal Tracker";
+<<<<<<< Updated upstream
 			productReference = 7EBA6E2923BDDD5300B1191D /* Meal Tracker.app */;
+=======
+			productReference = 7EBA6E0923BDDD1A00B1191D /* Meal Tracker.app */;
+>>>>>>> Stashed changes
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
+<<<<<<< Updated upstream
 		7EBA6E2123BDDD5300B1191D /* Project object */ = {
+=======
+		7EBA6E0123BDDD1A00B1191D /* Project object */ = {
+>>>>>>> Stashed changes
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
 				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Hyunsik Won";
 				TargetAttributes = {
+<<<<<<< Updated upstream
 					7EBA6E2823BDDD5300B1191D = {
+=======
+					7EBA6E0823BDDD1A00B1191D = {
+>>>>>>> Stashed changes
 						CreatedOnToolsVersion = 11.3;
 					};
 				};
 			};
+<<<<<<< Updated upstream
 			buildConfigurationList = 7EBA6E2423BDDD5300B1191D /* Build configuration list for PBXProject "Meal Tracker" */;
+=======
+			buildConfigurationList = 7EBA6E0423BDDD1A00B1191D /* Build configuration list for PBXProject "Meal Tracker" */;
+>>>>>>> Stashed changes
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -124,17 +205,27 @@
 				en,
 				Base,
 			);
+<<<<<<< Updated upstream
 			mainGroup = 7EBA6E2023BDDD5300B1191D;
 			productRefGroup = 7EBA6E2A23BDDD5300B1191D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				7EBA6E2823BDDD5300B1191D /* Meal Tracker */,
+=======
+			mainGroup = 7EBA6E0023BDDD1A00B1191D;
+			productRefGroup = 7EBA6E0A23BDDD1A00B1191D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7EBA6E0823BDDD1A00B1191D /* Meal Tracker */,
+>>>>>>> Stashed changes
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+<<<<<<< Updated upstream
 		7EBA6E2723BDDD5300B1191D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -142,12 +233,22 @@
 				7EBA6E3923BDDD5400B1191D /* LaunchScreen.storyboard in Resources */,
 				7EBA6E3623BDDD5400B1191D /* Assets.xcassets in Resources */,
 				7EBA6E3423BDDD5300B1191D /* Main.storyboard in Resources */,
+=======
+		7EBA6E0723BDDD1A00B1191D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EBA6E1923BDDD1B00B1191D /* LaunchScreen.storyboard in Resources */,
+				7EBA6E1623BDDD1B00B1191D /* Assets.xcassets in Resources */,
+				7EBA6E1423BDDD1A00B1191D /* Main.storyboard in Resources */,
+>>>>>>> Stashed changes
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+<<<<<<< Updated upstream
 		7EBA6E2523BDDD5300B1191D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -157,24 +258,47 @@
 				7EBA6E4823BDDEA500B1191D /* Food.swift in Sources */,
 				7EBA6E4423BDDE7C00B1191D /* FoodTableViewController.swift in Sources */,
 				7EBA6E2F23BDDD5300B1191D /* SceneDelegate.swift in Sources */,
+=======
+		7EBA6E0523BDDD1A00B1191D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7EBA6E1123BDDD1A00B1191D /* ViewController.swift in Sources */,
+				7EBA6E0D23BDDD1A00B1191D /* AppDelegate.swift in Sources */,
+				7EBA6E0F23BDDD1A00B1191D /* SceneDelegate.swift in Sources */,
+>>>>>>> Stashed changes
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+<<<<<<< Updated upstream
 		7EBA6E3223BDDD5300B1191D /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7EBA6E3323BDDD5300B1191D /* Base */,
+=======
+		7EBA6E1223BDDD1A00B1191D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EBA6E1323BDDD1A00B1191D /* Base */,
+>>>>>>> Stashed changes
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
+<<<<<<< Updated upstream
 		7EBA6E3723BDDD5400B1191D /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				7EBA6E3823BDDD5400B1191D /* Base */,
+=======
+		7EBA6E1723BDDD1B00B1191D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7EBA6E1823BDDD1B00B1191D /* Base */,
+>>>>>>> Stashed changes
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -182,7 +306,11 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+<<<<<<< Updated upstream
 		7EBA6E3B23BDDD5400B1191D /* Debug */ = {
+=======
+		7EBA6E1B23BDDD1B00B1191D /* Debug */ = {
+>>>>>>> Stashed changes
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -242,7 +370,11 @@
 			};
 			name = Debug;
 		};
+<<<<<<< Updated upstream
 		7EBA6E3C23BDDD5400B1191D /* Release */ = {
+=======
+		7EBA6E1C23BDDD1B00B1191D /* Release */ = {
+>>>>>>> Stashed changes
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -296,7 +428,11 @@
 			};
 			name = Release;
 		};
+<<<<<<< Updated upstream
 		7EBA6E3E23BDDD5400B1191D /* Debug */ = {
+=======
+		7EBA6E1E23BDDD1B00B1191D /* Debug */ = {
+>>>>>>> Stashed changes
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -314,7 +450,11 @@
 			};
 			name = Debug;
 		};
+<<<<<<< Updated upstream
 		7EBA6E3F23BDDD5400B1191D /* Release */ = {
+=======
+		7EBA6E1F23BDDD1B00B1191D /* Release */ = {
+>>>>>>> Stashed changes
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -335,25 +475,45 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+<<<<<<< Updated upstream
 		7EBA6E2423BDDD5300B1191D /* Build configuration list for PBXProject "Meal Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7EBA6E3B23BDDD5400B1191D /* Debug */,
 				7EBA6E3C23BDDD5400B1191D /* Release */,
+=======
+		7EBA6E0423BDDD1A00B1191D /* Build configuration list for PBXProject "Meal Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EBA6E1B23BDDD1B00B1191D /* Debug */,
+				7EBA6E1C23BDDD1B00B1191D /* Release */,
+>>>>>>> Stashed changes
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+<<<<<<< Updated upstream
 		7EBA6E3D23BDDD5400B1191D /* Build configuration list for PBXNativeTarget "Meal Tracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				7EBA6E3E23BDDD5400B1191D /* Debug */,
 				7EBA6E3F23BDDD5400B1191D /* Release */,
+=======
+		7EBA6E1D23BDDD1B00B1191D /* Build configuration list for PBXNativeTarget "Meal Tracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7EBA6E1E23BDDD1B00B1191D /* Debug */,
+				7EBA6E1F23BDDD1B00B1191D /* Release */,
+>>>>>>> Stashed changes
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
+<<<<<<< Updated upstream
 	rootObject = 7EBA6E2123BDDD5300B1191D /* Project object */;
+=======
+	rootObject = 7EBA6E0123BDDD1A00B1191D /* Project object */;
+>>>>>>> Stashed changes
 }

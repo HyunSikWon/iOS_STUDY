@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  Meal Tracker
 //
-//  Created by 원현식 on 2020/01/02.
+//  Created by 원현식 on 2020/01/03.
 //  Copyright © 2020 Hyunsik Won. All rights reserved.
 //
 

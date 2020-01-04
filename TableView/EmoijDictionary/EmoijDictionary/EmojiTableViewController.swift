@@ -29,6 +29,7 @@ class EmojiTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = editButtonItem
+        navigationController?.navigationBar.prefersLargeTitles = true
 
     }
 
@@ -42,13 +43,17 @@ class EmojiTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell : UITableViewCell = tableView.dequeueReusableCell(withIdentifier: "EmojiCell", for: indexPath)
+        // Step 1: Dequeue Cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EmojiCell", for: indexPath) as! EmojiTableViewCell
+        
+        // Step 2: Fetch model object to display
         let emoji = emojis[indexPath.row]
         
-        cell.textLabel?.text = "\(emoji.symbol) - \(emoji.name)"
-        cell.detailTextLabel?.text = emoji.description
-        
+        // Step 3: Configure Cell
+        cell.update(with : emoji)
         cell.showsReorderControl = true
+        
+        // Step 4: Return Cell
         return cell
         
     }
@@ -65,6 +70,15 @@ class EmojiTableViewController: UITableViewController {
         tableView.reloadData()
     }
 
-
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            emojis.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
 
 }

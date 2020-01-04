@@ -121,6 +121,64 @@ Apple 문서 참조할 것.
 
 ---
 
+### Custom Table View Cells
+
+필요에 따라 iOS SDK가 제공하는 cell style이 아닌 custom table view cell이 필요함.
+
+InterFace Builder에서 cell style을 'Custom' 으로 설정
+
+custom table view subclass 생성 후 
+
+`tableView(_: cellForRowAt)`에서
+~~~swift
+
+let cell = tableView.dequeueReusableCell(withIdentifier : "EmojiCell", for : indexPath) as! EmojiTableViewCell
+
+~~~
+cell을 dequeue하면 method가 UITableViewCell instance를 반환하기 때문에 downcast 해야함.
+
+
+### Edit Table View
+
+table view가 editing mode에 들어가면 delegate method인 `tableView(_:editingStyleForRowAt)`을 호출한다.
+
+edit style에는 .none, .delete, .insert 가 있다.
+
+table view가 편집모드에 들어가면 몇몇 data source, delgate method들이 순차적으로 호출된다.
+
+1. `tableView(_:canEditRowAt:)` - 특정 row를 편집에서 배제하기 위해 사용되나 대부분의 앱에서는 필요 없다.
+2. `tableView(_:editingStyleForRowAt:)` - row의 editing style을 지정하기위해 사용된다.
+3. 사용자가 editing control을 탭. deletion control이라면 App이 Delete 버튼을 나타낸다.
+4. `tableView(_:commit:forRowAt:)` - step 3에서 사용자의 action을 반영하여 data model을 업데이트하기 위해 사용된다.
+
+4번의 경우 optional이지만 row를 delete/insert 하기 위해선 반드시 수행해야 한다.
+
+### Delete Items
+
+step 2의 과정.
+~~~swift
+
+ override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+~~~
+
+step3에서 user의 action은 아래와 같은 코드를 수행하게 한다.
+~~~swift
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            emojis.remove(at: indexPath.row)
+            tableView.deleteRows(at: [indexPath], with: .automatic)
+        }
+    }
+
+~~~
+
+삭제 과정에서 app은 백그라운드의 data(model)와 table view 자체(view)를 모두 업데이트 해야한다.
+
+---
+
 ### Related Resources
 - [Table View Programming Guide for iOS](https://developer.apple.com/documentation/uikit/views_and_controls/table_views)
 - [API Reference : UITableView]()

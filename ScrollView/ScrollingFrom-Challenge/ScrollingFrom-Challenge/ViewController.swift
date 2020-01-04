@@ -9,12 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    @IBOutlet var pageControl: UIPageControl!
+}
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
-
-
+extension ViewController: UIScrollViewDelegate {
+  func scrollViewDidScroll(_ scrollView: UIScrollView) {
+    let pageWidth = scrollView.bounds.width
+    pageControl.currentPage = Int(scrollView.contentOffset.x / pageWidth)
+  }
 }
 

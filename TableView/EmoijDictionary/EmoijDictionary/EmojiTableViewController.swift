@@ -59,10 +59,6 @@ class EmojiTableViewController: UITableViewController {
     }
     
     // MARK: - Table view Delegate
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let emoji = emojis[indexPath.row]
-        print("\(emoji.symbol) \(indexPath)")
-    }
     
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let movedEmoji = emojis.remove(at: sourceIndexPath.row)
@@ -80,5 +76,37 @@ class EmojiTableViewController: UITableViewController {
             tableView.deleteRows(at: [indexPath], with: .automatic)
         }
     }
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "EditEmoji" {
+            let indexPath = tableView.indexPathForSelectedRow!
+            let emoji = emojis[indexPath.row]
+            
+            let navController = segue.destination as! UINavigationController
+            let addEditEmojiTableViewController = navController.topViewController as! AddEditEmojiTableViewController
+            
+            addEditEmojiTableViewController.emoji = emoji
+            
+        }
+    }
+    
+    @IBAction func unwindToEmojiTableViewController(segue : UIStoryboardSegue) {
+        guard segue.identifier == "saveUnwind", // save가 아니라 cancel이면 그냥 return
+            let sourceViewController = segue.source as? AddEditEmojiTableViewController,
+            let emoji = sourceViewController.emoji else { return }
+        
+        // 기존 row 수정
+        if let selectedRow = tableView.indexPathForSelectedRow {
+            emojis[selectedRow.row] = emoji
+            tableView.reloadRows(at: [selectedRow], with: .none)
+            
+        // 새로운 row 추가
+        } else {
+            let newIndexPath = IndexPath(row: emojis.count, section: 0)
+            emojis.append(emoji)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+        
+        
+    }
 }

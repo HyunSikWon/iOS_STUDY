@@ -25,19 +25,19 @@ class EmojiTableViewController: UITableViewController {
         Emoji(symbol: "💤", name: "Snore", description: "Three blue \'z\'s.", usage: "tired, sleepiness"),
         Emoji(symbol: "🏁", name: "Checkered Flag", description: "A black-and-white checkered flag", usage: "completion")
     ]
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationItem.leftBarButtonItem = editButtonItem
         navigationController?.navigationBar.prefersLargeTitles = true
-
+        
     }
-
+    
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return emojis.count
     }
@@ -59,16 +59,12 @@ class EmojiTableViewController: UITableViewController {
     }
     
     // MARK: - Table view Delegate
-<<<<<<< Updated upstream
-    
-=======
->>>>>>> Stashed changes
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let movedEmoji = emojis.remove(at: sourceIndexPath.row)
         emojis.insert(movedEmoji, at: destinationIndexPath.row)
         tableView.reloadData()
     }
-
+    
     override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
         return .delete
     }
@@ -86,15 +82,11 @@ class EmojiTableViewController: UITableViewController {
             let emoji = emojis[indexPath.row]
             
             let navController = segue.destination as! UINavigationController
-<<<<<<< Updated upstream
-=======
             
->>>>>>> Stashed changes
             let addEditEmojiTableViewController = navController.topViewController as! AddEditEmojiTableViewController
             
             addEditEmojiTableViewController.emoji = emoji
             
-<<<<<<< Updated upstream
         }
     }
     
@@ -108,8 +100,6 @@ class EmojiTableViewController: UITableViewController {
             emojis[selectedRow.row] = emoji
             tableView.reloadRows(at: [selectedRow], with: .none)
             
-=======
-            
         }
     }
     
@@ -117,27 +107,24 @@ class EmojiTableViewController: UITableViewController {
         guard segue.identifier == "saveUnwind",
             let sourceViewController = segue.source as? AddEditEmojiTableViewController,
             let emoji = sourceViewController.emoji else { return }
-
+        
         // 기존 row 수정
         if let selectedIndex = tableView.indexPathForSelectedRow {
             emojis[selectedIndex.row] = emoji
             tableView.reloadRows(at: [selectedIndex], with: .none)
-
->>>>>>> Stashed changes
-        // 새로운 row 추가
+            
+            
+            // 새로운 row 추가
         } else {
             let newIndexPath = IndexPath(row: emojis.count, section: 0)
             emojis.append(emoji)
             tableView.insertRows(at: [newIndexPath], with: .automatic)
         }
         
-<<<<<<< Updated upstream
         
     }
-=======
-
-    }
-
->>>>>>> Stashed changes
+    
+    
 }
+
 

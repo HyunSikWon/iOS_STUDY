@@ -15,15 +15,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="EmojiCell" id="Mv7-95-YCX" customClass="EmojiTableViewCell" customModule="EmoijDictionary" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="EmojiCell" id="Mv7-95-YCX" customClass="EmojiTableViewCell" customModule="EmoijDictionary" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="414" height="63.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Mv7-95-YCX" id="uhv-RJ-DdG">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="63.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="383" height="63.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dcP-J5-bw9">
-                                            <rect key="frame" x="20" y="11" width="374" height="41.5"/>
+                                            <rect key="frame" x="20" y="11" width="355" height="41.5"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="🥰 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CM2-DE-9Hc">
                                                     <rect key="frame" x="0.0" y="0.0" width="32.5" height="41.5"/>
@@ -32,16 +32,16 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="otf-HJ-c8w">
-                                                    <rect key="frame" x="32.5" y="0.0" width="341.5" height="41.5"/>
+                                                    <rect key="frame" x="32.5" y="0.0" width="322.5" height="41.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1PY-0i-YCe">
-                                                            <rect key="frame" x="0.0" y="0.0" width="341.5" height="21"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="322.5" height="21"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfR-x0-eCU">
-                                                            <rect key="frame" x="0.0" y="21" width="341.5" height="20.5"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FfR-x0-eCU">
+                                                            <rect key="frame" x="0.0" y="21" width="322.5" height="20.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
@@ -62,7 +62,11 @@
                                     <outlet property="descriptionLabel" destination="FfR-x0-eCU" id="oUd-n9-XbD"/>
                                     <outlet property="nameLabel" destination="1PY-0i-YCe" id="JK0-QT-yYT"/>
                                     <outlet property="symbolLabel" destination="CM2-DE-9Hc" id="tv1-oB-3Q7"/>
+<<<<<<< Updated upstream
                                     <segue destination="0Ug-wm-q8j" kind="presentation" identifier="EditEmoji" id="3Gq-v5-sOe"/>
+=======
+                                    <segue destination="vQB-i9-aqu" kind="presentation" identifier="EditEmoji" id="fFV-Le-JXH"/>
+>>>>>>> Stashed changes
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -72,9 +76,15 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Emoji Dictionary" id="Mfb-dB-3UE">
+<<<<<<< Updated upstream
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="erK-ZC-itT">
                             <connections>
                                 <segue destination="0Ug-wm-q8j" kind="presentation" id="w25-dc-Z4n"/>
+=======
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="dIV-Hb-0N1">
+                            <connections>
+                                <segue destination="vQB-i9-aqu" kind="presentation" id="TtW-NK-nk5"/>
+>>>>>>> Stashed changes
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -84,14 +94,22 @@
             <point key="canvasLocation" x="361" y="-44"/>
         </scene>
         <!--Root View Controller-->
+<<<<<<< Updated upstream
         <scene sceneID="BYc-XU-Rdu">
             <objects>
                 <tableViewController id="wq1-BJ-OPN" customClass="AddEditEmojiTableViewController" customModule="EmoijDictionary" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="3JX-tl-OgC">
+=======
+        <scene sceneID="JBe-6C-gzw">
+            <objects>
+                <tableViewController id="noI-h7-bBi" customClass="AddEditEmojiTableViewController" customModule="EmoijDictionary" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="jQh-jr-6x7">
+>>>>>>> Stashed changes
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
+<<<<<<< Updated upstream
                             <tableViewSection headerTitle="Symbol" id="wVb-yx-wlU">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="MJx-Rl-tMc">
@@ -102,24 +120,48 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="E72-nw-oBi">
+=======
+                            <tableViewSection headerTitle="SYMBOL" id="ZxD-Pm-W7K">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LPt-kC-jl5">
+                                        <rect key="frame" x="0.0" y="55.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="LPt-kC-jl5" id="S4F-0t-j3w">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nO5-PE-IRe">
+>>>>>>> Stashed changes
                                                     <rect key="frame" x="20" y="4" width="374" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
+<<<<<<< Updated upstream
                                                         <action selector="textEditingChanged:" destination="wq1-BJ-OPN" eventType="editingDidEnd" id="HGV-ch-Kke"/>
+=======
+                                                        <action selector="textEditingChanged:" destination="noI-h7-bBi" eventType="editingDidEnd" id="Ybe-dE-b99"/>
+>>>>>>> Stashed changes
                                                     </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
+<<<<<<< Updated upstream
                                                 <constraint firstAttribute="bottom" secondItem="E72-nw-oBi" secondAttribute="bottom" constant="4" id="9I8-4I-eBS"/>
                                                 <constraint firstItem="E72-nw-oBi" firstAttribute="leading" secondItem="SCV-6F-0z7" secondAttribute="leading" constant="20" id="9Jm-8q-wUZ"/>
                                                 <constraint firstItem="E72-nw-oBi" firstAttribute="top" secondItem="SCV-6F-0z7" secondAttribute="top" constant="4" id="HI1-7P-spr"/>
                                                 <constraint firstAttribute="trailing" secondItem="E72-nw-oBi" secondAttribute="trailing" constant="20" id="Nxk-Qo-tI6"/>
+=======
+                                                <constraint firstItem="nO5-PE-IRe" firstAttribute="leading" secondItem="S4F-0t-j3w" secondAttribute="leading" constant="20" id="0ar-Pz-dDd"/>
+                                                <constraint firstItem="nO5-PE-IRe" firstAttribute="top" secondItem="S4F-0t-j3w" secondAttribute="top" constant="4" id="fhU-zm-WcW"/>
+                                                <constraint firstAttribute="trailing" secondItem="nO5-PE-IRe" secondAttribute="trailing" constant="20" id="hlN-af-QRG"/>
+                                                <constraint firstAttribute="bottom" secondItem="nO5-PE-IRe" secondAttribute="bottom" constant="4" id="tqc-o0-XZK"/>
+>>>>>>> Stashed changes
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+<<<<<<< Updated upstream
                             <tableViewSection headerTitle="NAME" id="JN5-Dd-4DA">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vSf-Ml-yYP">
@@ -130,24 +172,48 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Igi-zb-iWP">
+=======
+                            <tableViewSection headerTitle="NAME" id="H28-Ys-fgV">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="GBw-Lj-kNx">
+                                        <rect key="frame" x="0.0" y="155" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GBw-Lj-kNx" id="Jk3-rt-0cg">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sbw-sS-yAs">
+>>>>>>> Stashed changes
                                                     <rect key="frame" x="20" y="4" width="374" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
+<<<<<<< Updated upstream
                                                         <action selector="textEditingChanged:" destination="wq1-BJ-OPN" eventType="editingDidEnd" id="Ndk-bP-krD"/>
+=======
+                                                        <action selector="textEditingChanged:" destination="noI-h7-bBi" eventType="editingDidEnd" id="2qE-UT-X20"/>
+>>>>>>> Stashed changes
                                                     </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
+<<<<<<< Updated upstream
                                                 <constraint firstItem="Igi-zb-iWP" firstAttribute="leading" secondItem="9Co-Ql-f0f" secondAttribute="leading" constant="20" id="49A-9z-w5L"/>
                                                 <constraint firstAttribute="bottom" secondItem="Igi-zb-iWP" secondAttribute="bottom" constant="4" id="BRd-t7-BN7"/>
                                                 <constraint firstItem="Igi-zb-iWP" firstAttribute="top" secondItem="9Co-Ql-f0f" secondAttribute="top" constant="4" id="GMd-jz-xZL"/>
                                                 <constraint firstAttribute="trailing" secondItem="Igi-zb-iWP" secondAttribute="trailing" constant="20" id="H7g-h4-Ve0"/>
+=======
+                                                <constraint firstAttribute="bottom" secondItem="sbw-sS-yAs" secondAttribute="bottom" constant="4" id="2ih-Wx-Lvc"/>
+                                                <constraint firstItem="sbw-sS-yAs" firstAttribute="top" secondItem="Jk3-rt-0cg" secondAttribute="top" constant="4" id="SYD-aw-pnn"/>
+                                                <constraint firstAttribute="trailing" secondItem="sbw-sS-yAs" secondAttribute="trailing" constant="20" id="Xwt-Xc-Eph"/>
+                                                <constraint firstItem="sbw-sS-yAs" firstAttribute="leading" secondItem="Jk3-rt-0cg" secondAttribute="leading" constant="20" id="mqO-63-GM1"/>
+>>>>>>> Stashed changes
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+<<<<<<< Updated upstream
                             <tableViewSection headerTitle="DESCRIPTION" id="deJ-YP-pPD">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="3DE-cK-6AK">
@@ -158,24 +224,48 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eKP-Jf-e1a">
+=======
+                            <tableViewSection headerTitle="DESCRIPTION" id="Bil-dE-tHr">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="oag-nj-VBg">
+                                        <rect key="frame" x="0.0" y="254.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oag-nj-VBg" id="JvR-Ku-CL0">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wMd-gZ-cO9">
+>>>>>>> Stashed changes
                                                     <rect key="frame" x="20" y="4" width="374" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
+<<<<<<< Updated upstream
                                                         <action selector="textEditingChanged:" destination="wq1-BJ-OPN" eventType="editingDidEnd" id="bbJ-Sx-b9y"/>
+=======
+                                                        <action selector="textEditingChanged:" destination="noI-h7-bBi" eventType="editingDidEnd" id="3wW-E4-cDf"/>
+>>>>>>> Stashed changes
                                                     </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
+<<<<<<< Updated upstream
                                                 <constraint firstItem="eKP-Jf-e1a" firstAttribute="leading" secondItem="6QI-Uw-fff" secondAttribute="leading" constant="20" id="5Cj-7C-SeW"/>
                                                 <constraint firstAttribute="bottom" secondItem="eKP-Jf-e1a" secondAttribute="bottom" constant="4" id="Fez-hk-gQz"/>
                                                 <constraint firstAttribute="trailing" secondItem="eKP-Jf-e1a" secondAttribute="trailing" constant="20" id="QDA-gQ-89M"/>
                                                 <constraint firstItem="eKP-Jf-e1a" firstAttribute="top" secondItem="6QI-Uw-fff" secondAttribute="top" constant="4" id="acp-2S-iKB"/>
+=======
+                                                <constraint firstAttribute="bottom" secondItem="wMd-gZ-cO9" secondAttribute="bottom" constant="4" id="7Eb-Oc-o6w"/>
+                                                <constraint firstItem="wMd-gZ-cO9" firstAttribute="leading" secondItem="JvR-Ku-CL0" secondAttribute="leading" constant="20" id="Lon-t8-jnO"/>
+                                                <constraint firstItem="wMd-gZ-cO9" firstAttribute="top" secondItem="JvR-Ku-CL0" secondAttribute="top" constant="4" id="RDe-x4-NqZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="wMd-gZ-cO9" secondAttribute="trailing" constant="20" id="nIi-DH-6OV"/>
+>>>>>>> Stashed changes
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
+<<<<<<< Updated upstream
                             <tableViewSection headerTitle="USAGE" id="cXE-N0-WI9">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="LLx-Np-xdr">
@@ -186,19 +276,42 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oXH-up-BgF">
+=======
+                            <tableViewSection headerTitle="USAGE" id="v1p-Ql-x9q">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="UXp-BH-Bsv">
+                                        <rect key="frame" x="0.0" y="354" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UXp-BH-Bsv" id="B6Y-Nt-42Q">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8lE-L6-hdb">
+>>>>>>> Stashed changes
                                                     <rect key="frame" x="20" y="4" width="374" height="36"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                     <connections>
+<<<<<<< Updated upstream
                                                         <action selector="textEditingChanged:" destination="wq1-BJ-OPN" eventType="editingDidEnd" id="55X-6e-ztL"/>
+=======
+                                                        <action selector="textEditingChanged:" destination="noI-h7-bBi" eventType="editingDidEnd" id="m4M-ip-6Fn"/>
+>>>>>>> Stashed changes
                                                     </connections>
                                                 </textField>
                                             </subviews>
                                             <constraints>
+<<<<<<< Updated upstream
                                                 <constraint firstItem="oXH-up-BgF" firstAttribute="top" secondItem="e0Q-OD-qEi" secondAttribute="top" constant="4" id="AGy-Vw-NEj"/>
                                                 <constraint firstAttribute="trailing" secondItem="oXH-up-BgF" secondAttribute="trailing" constant="20" id="F6o-RO-UhO"/>
                                                 <constraint firstItem="oXH-up-BgF" firstAttribute="leading" secondItem="e0Q-OD-qEi" secondAttribute="leading" constant="20" id="HoT-R6-JHC"/>
                                                 <constraint firstAttribute="bottom" secondItem="oXH-up-BgF" secondAttribute="bottom" constant="4" id="wWZ-d3-Qrp"/>
+=======
+                                                <constraint firstItem="8lE-L6-hdb" firstAttribute="top" secondItem="B6Y-Nt-42Q" secondAttribute="top" constant="4" id="4Y0-qv-umN"/>
+                                                <constraint firstAttribute="bottom" secondItem="8lE-L6-hdb" secondAttribute="bottom" constant="4" id="T0M-DB-UtA"/>
+                                                <constraint firstItem="8lE-L6-hdb" firstAttribute="leading" secondItem="B6Y-Nt-42Q" secondAttribute="leading" constant="20" id="k7a-OG-LNZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="8lE-L6-hdb" secondAttribute="trailing" constant="20" id="ktx-ak-9Ml"/>
+>>>>>>> Stashed changes
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -206,6 +319,7 @@
                             </tableViewSection>
                         </sections>
                         <connections>
+<<<<<<< Updated upstream
                             <outlet property="dataSource" destination="wq1-BJ-OPN" id="B3q-Db-lqj"/>
                             <outlet property="delegate" destination="wq1-BJ-OPN" id="Vsg-n6-VwG"/>
                         </connections>
@@ -219,10 +333,26 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="save" id="3Rg-22-1NV">
                             <connections>
                                 <segue destination="RM4-oN-ZLq" kind="unwind" identifier="saveUnwind" unwindAction="unwindToEmojiTableViewControllerWithSegue:" id="nLT-ru-szD"/>
+=======
+                            <outlet property="dataSource" destination="noI-h7-bBi" id="AvP-Pf-aNN"/>
+                            <outlet property="delegate" destination="noI-h7-bBi" id="NLs-jg-38K"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="u97-Ra-fjZ">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="6Sg-0c-cSP">
+                            <connections>
+                                <segue destination="NOw-Vd-IHm" kind="unwind" identifier="" unwindAction="unwindToEmojiTableViewWithSegue:" id="jO9-L9-o3d"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="T2n-tT-05J">
+                            <connections>
+                                <segue destination="NOw-Vd-IHm" kind="unwind" identifier="saveUnwind" unwindAction="unwindToEmojiTableViewWithSegue:" id="bf1-Pp-aVe"/>
+>>>>>>> Stashed changes
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
+<<<<<<< Updated upstream
                         <outlet property="descriptionTextField" destination="eKP-Jf-e1a" id="CNl-Nz-XB1"/>
                         <outlet property="nameTextField" destination="Igi-zb-iWP" id="Joe-Yi-PPE"/>
                         <outlet property="saveButton" destination="3Rg-22-1NV" id="0Ab-EZ-ZkW"/>
@@ -240,16 +370,45 @@
             <objects>
                 <navigationController id="0Ug-wm-q8j" sceneMemberID="viewController">
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HqS-3N-Wzl">
+=======
+                        <outlet property="descriptionTextField" destination="wMd-gZ-cO9" id="keo-Q9-PIn"/>
+                        <outlet property="nameTextField" destination="sbw-sS-yAs" id="gWS-sv-Gry"/>
+                        <outlet property="saveButton" destination="T2n-tT-05J" id="a0L-Tn-ali"/>
+                        <outlet property="symbolTextField" destination="nO5-PE-IRe" id="DXv-f3-79l"/>
+                        <outlet property="usageTextField" destination="8lE-L6-hdb" id="Am6-bq-abm"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ylN-ec-OTA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="NOw-Vd-IHm" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="2102.898550724638" y="-44.196428571428569"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="RgO-gE-cz8">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ebf-vY-LhP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController id="vQB-i9-aqu" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Esn-mh-Zfk"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="lRo-l7-r8m">
+>>>>>>> Stashed changes
                         <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
+<<<<<<< Updated upstream
                         <segue destination="wq1-BJ-OPN" kind="relationship" relationship="rootViewController" id="HZx-YF-9Wi"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a9z-L2-d7b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1220" y="-44"/>
+=======
+                        <segue destination="noI-h7-bBi" kind="relationship" relationship="rootViewController" id="nv5-hN-mvR"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="1214" y="-14"/>
+>>>>>>> Stashed changes
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Nj7-ot-mfh">
@@ -269,6 +428,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+<<<<<<< Updated upstream
         <segue reference="3Gq-v5-sOe"/>
+=======
+        <segue reference="fFV-Le-JXH"/>
+>>>>>>> Stashed changes
     </inferredMetricsTieBreakers>
 </document>

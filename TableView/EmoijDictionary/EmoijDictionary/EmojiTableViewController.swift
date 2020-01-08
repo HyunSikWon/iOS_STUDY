@@ -59,7 +59,10 @@ class EmojiTableViewController: UITableViewController {
     }
     
     // MARK: - Table view Delegate
+<<<<<<< Updated upstream
     
+=======
+>>>>>>> Stashed changes
     override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
         let movedEmoji = emojis.remove(at: sourceIndexPath.row)
         emojis.insert(movedEmoji, at: destinationIndexPath.row)
@@ -83,10 +86,15 @@ class EmojiTableViewController: UITableViewController {
             let emoji = emojis[indexPath.row]
             
             let navController = segue.destination as! UINavigationController
+<<<<<<< Updated upstream
+=======
+            
+>>>>>>> Stashed changes
             let addEditEmojiTableViewController = navController.topViewController as! AddEditEmojiTableViewController
             
             addEditEmojiTableViewController.emoji = emoji
             
+<<<<<<< Updated upstream
         }
     }
     
@@ -100,6 +108,22 @@ class EmojiTableViewController: UITableViewController {
             emojis[selectedRow.row] = emoji
             tableView.reloadRows(at: [selectedRow], with: .none)
             
+=======
+            
+        }
+    }
+    
+    @IBAction func unwindToEmojiTableView(segue: UIStoryboardSegue) {
+        guard segue.identifier == "saveUnwind",
+            let sourceViewController = segue.source as? AddEditEmojiTableViewController,
+            let emoji = sourceViewController.emoji else { return }
+
+        // 기존 row 수정
+        if let selectedIndex = tableView.indexPathForSelectedRow {
+            emojis[selectedIndex.row] = emoji
+            tableView.reloadRows(at: [selectedIndex], with: .none)
+
+>>>>>>> Stashed changes
         // 새로운 row 추가
         } else {
             let newIndexPath = IndexPath(row: emojis.count, section: 0)
@@ -107,6 +131,13 @@ class EmojiTableViewController: UITableViewController {
             tableView.insertRows(at: [newIndexPath], with: .automatic)
         }
         
+<<<<<<< Updated upstream
         
     }
+=======
+
+    }
+
+>>>>>>> Stashed changes
 }
+

@@ -1,12 +1,12 @@
 ## App Development with Swift[Apple Education]
 
 ### Index
-- [Navigation and Workflows](#Navigatoin-and-workflows)
+- [Navigation and Workflows](#Segues-an-Navigation-Controllers)
 - [Table View](#Table-View)
 - [Scroll View](#Scroll-View)
 
 ---
-### [**Navigation and Workflows**](https://github.com/HyunSikWon/iOS_STUDY/tree/master/Navigation%20and%20Workflows)
+### [**Segues and Navigation Controllers**](https://github.com/HyunSikWon/iOS_STUDY/tree/master/Segues%20and%20Navigation%20Controllers)
    - Navigation and Workflows 요약, 정리
    - [Apple Edu 교재 ](https://github.com/HyunSikWon/iOS_STUDY/tree/master/Navigation%20and%20Workflows/TrafficSegues/TrafficSegues)
    - [Apple Edu 교재 - 2](https://github.com/HyunSikWon/iOS_STUDY/tree/master/Navigation%20and%20Workflows/TrafficSegues-2/TrafficSegues-2)

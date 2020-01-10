@@ -3,6 +3,7 @@
 ### Index
 - [Segues an Navigation Controllers](#Segues-and-Navigation-Controllers)
 - [Tab Bar Controllers](#Tab-Bar-Controllers)
+- [View Controller Life Cycle](#View-Controller-Life-Cycle)
 - [Table View](#Table-View)
 - [Scroll View](#Scroll-View)
 
@@ -16,6 +17,11 @@
 ### [**Tab Bar Controllers**](https://github.com/HyunSikWon/iOS_STUDY/tree/master/Tab%20Bar%20Controllers)
 - [Apple Edu 교재](https://github.com/HyunSikWon/iOS_STUDY/tree/master/Tab%20Bar%20Controllers/RainbowTabs/RainbowTabs)
 - [Apple Edu 교재 - LAB](https://github.com/HyunSikWon/iOS_STUDY/tree/master/Tab%20Bar%20Controllers/AboutMe/AboutMe)
+
+### [**View Controller Life Cycle**](https://github.com/HyunSikWon/iOS_STUDY/tree/master/View%20Controller%20Life%20Cycle)
+- [View Controller Life Cycle 요약 정리]()
+- [Apple Edu 교재](https://github.com/HyunSikWon/iOS_STUDY/tree/master/View%20Controller%20Life%20Cycle/LifeCycle)
+- [Apple Edu 교재 - LAB](https://github.com/HyunSikWon/iOS_STUDY/tree/master/View%20Controller%20Life%20Cycle/OrderOfEvents)
    
 ### [**Table View**](https://github.com/HyunSikWon/iOS_STUDY/tree/master/TableView)
    - [Table View 요약, 정리](https://github.com/HyunSikWon/iOS_STUDY/blob/master/TableView/Table%20View.md)

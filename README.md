@@ -1,7 +1,7 @@
 ## App Development with Swift[Apple Education]
 
 ### Index
-- [Navigation and Workflows](#Segues-an-Navigation-Controllers)
+- [Segues an Navigation Controllers](#Segues-and-Navigation-Controllers)
 - [Tab Bar Controllers](#Tab-Bar-Controllers)
 - [Table View](#Table-View)
 - [Scroll View](#Scroll-View)

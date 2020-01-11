@@ -19,16 +19,13 @@ class AthleteFormViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.leftBarButtonItem?.title = "Cancel"
         
         if let athlete = athlete {
             nameTextField.text = athlete.name
             ageTextField.text = athlete.age
             leagueTextField.text = athlete.league
             teamTextField.text = athlete.team
-            
-            navigationItem.title = "Edit"
-            
+
         }
     }
     

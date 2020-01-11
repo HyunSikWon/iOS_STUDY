@@ -39,7 +39,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="Pgk-KD-kpf" kind="show" identifier="EditAthlete" id="DaP-mh-y3V"/>
+                                    <segue destination="Q2W-AY-iVy" kind="modal" identifier="EditAthlete" id="DaP-mh-y3V"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -51,7 +51,7 @@
                     <navigationItem key="navigationItem" title="My Favorite Athlete" id="CBJ-Qd-vme">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="r1w-hv-vOJ">
                             <connections>
-                                <segue destination="Pgk-KD-kpf" kind="push" identifier="AddAthlete" id="0Yv-ch-tai"/>
+                                <segue destination="Q2W-AY-iVy" kind="modal" identifier="AddAthlete" id="0Yv-ch-tai"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -60,12 +60,12 @@
             </objects>
             <point key="canvasLocation" x="371" y="173"/>
         </scene>
-        <!--Athlete Form View Controller-->
+        <!--Athlete Form-->
         <scene sceneID="ton-kg-rbs">
             <objects>
                 <tableViewController id="Pgk-KD-kpf" customClass="AthleteFormViewController" customModule="FavoriteAthlete" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Q0M-8H-rGb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
@@ -175,8 +175,9 @@
                             <outlet property="delegate" destination="Pgk-KD-kpf" id="043-4G-VtU"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Jow-Qf-Vk9">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="7cb-Xl-ef3"/>
+                    <navigationItem key="navigationItem" title="Athlete Form" id="Jow-Qf-Vk9">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="KRB-2C-8Oo"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="7cb-Xl-ef3"/>
                     </navigationItem>
                     <connections>
                         <outlet property="ageTextField" destination="DxF-dE-rkA" id="b14-Ee-9sl"/>
@@ -187,12 +188,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4N-1l-DAM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1314.4927536231885" y="173.4375"/>
+            <point key="canvasLocation" x="2224.6376811594205" y="173.4375"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="FUp-wv-7gd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="oT8-WY-TYe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1xX-Xj-Z6D" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="7BV-Q5-goo">
@@ -204,8 +204,27 @@
                         <segue destination="rwb-62-UNs" kind="relationship" relationship="rootViewController" id="LIc-i3-YY0"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oT8-WY-TYe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-450.72463768115944" y="172.76785714285714"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="IEv-vA-0R0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Q2W-AY-iVy" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Mba-E8-INc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Pgk-KD-kpf" kind="relationship" relationship="rootViewController" id="JbT-xD-td1"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aJ1-dQ-fzR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1314.4927536231885" y="173.4375"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>

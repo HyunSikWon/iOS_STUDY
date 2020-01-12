@@ -12,7 +12,7 @@
 		7EF0CC7123C998E900FC5686 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EF0CC6F23C998E900FC5686 /* Main.storyboard */; };
 		7EF0CC7323C998E900FC5686 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EF0CC7223C998E900FC5686 /* Assets.xcassets */; };
 		7EF0CC7623C998E900FC5686 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EF0CC7423C998E900FC5686 /* LaunchScreen.storyboard */; };
-		7EF0CC7E23C9999700FC5686 /* AthleteFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF0CC7D23C9999700FC5686 /* AthleteFormViewController.swift */; };
+		7EF0CC7E23C9999700FC5686 /* AthleteFormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF0CC7D23C9999700FC5686 /* AthleteFormTableViewController.swift */; };
 		7EF0CC8023C999A700FC5686 /* AthleteTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF0CC7F23C999A700FC5686 /* AthleteTableViewController.swift */; };
 		7EF0CC8223C999BA00FC5686 /* Athlete.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EF0CC8123C999BA00FC5686 /* Athlete.swift */; };
 /* End PBXBuildFile section */
@@ -25,7 +25,7 @@
 		7EF0CC7223C998E900FC5686 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7EF0CC7523C998E900FC5686 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7EF0CC7723C998E900FC5686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7EF0CC7D23C9999700FC5686 /* AthleteFormViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteFormViewController.swift; sourceTree = "<group>"; };
+		7EF0CC7D23C9999700FC5686 /* AthleteFormTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteFormTableViewController.swift; sourceTree = "<group>"; };
 		7EF0CC7F23C999A700FC5686 /* AthleteTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AthleteTableViewController.swift; sourceTree = "<group>"; };
 		7EF0CC8123C999BA00FC5686 /* Athlete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Athlete.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -74,7 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				7EF0CC7F23C999A700FC5686 /* AthleteTableViewController.swift */,
-				7EF0CC7D23C9999700FC5686 /* AthleteFormViewController.swift */,
+				7EF0CC7D23C9999700FC5686 /* AthleteFormTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -169,7 +169,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EF0CC8223C999BA00FC5686 /* Athlete.swift in Sources */,
-				7EF0CC7E23C9999700FC5686 /* AthleteFormViewController.swift in Sources */,
+				7EF0CC7E23C9999700FC5686 /* AthleteFormTableViewController.swift in Sources */,
 				7EF0CC6A23C998E900FC5686 /* AppDelegate.swift in Sources */,
 				7EF0CC8023C999A700FC5686 /* AthleteTableViewController.swift in Sources */,
 				7EF0CC6C23C998E900FC5686 /* SceneDelegate.swift in Sources */,

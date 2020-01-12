@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AthleteFormViewController: UITableViewController {
+class AthleteFormTableViewController: UITableViewController {
     
     var athlete : Athlete?
     
@@ -27,6 +27,20 @@ class AthleteFormViewController: UITableViewController {
             teamTextField.text = athlete.team
 
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        
+        guard segue.identifier == "SaveUnwind" else { return }
+        
+        let name = nameTextField.text ?? ""
+        let age = ageTextField.text ?? ""
+        let league = leagueTextField.text ?? ""
+        let team = teamTextField.text ?? ""
+        
+        athlete = Athlete(name: name, age: age, team: team, league: league)
+        
     }
     
 }

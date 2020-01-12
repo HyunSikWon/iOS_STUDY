@@ -15,7 +15,8 @@ class AthleteTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        navigationItem.leftBarButtonItem = editButtonItem
+        navigationController?.navigationBar.prefersLargeTitles = true
     }
 
     // MARK: - Table view data source
@@ -39,13 +40,49 @@ class AthleteTableViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        return .delete
+    }
+    
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            athletes.remove(at: indexPath.row)
+            tableView.reloadData()
+        }
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let movedAthlete = athletes.remove(at: sourceIndexPath.row)
+        athletes.insert(movedAthlete, at: destinationIndexPath.row)
+        tableView.reloadData()
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let indexPath = tableView.indexPathForSelectedRow,
             segue.identifier == "EditAthlete" {
-            let destinationController = segue.destination as? AthleteFormViewController
-            destinationController?.athlete = athletes[indexPath.row]
+            let navController = segue.destination as! UINavigationController
+            let athleteFormTableViewController = navController.topViewController as! AthleteFormTableViewController
+            
+            athleteFormTableViewController.athlete = athletes[indexPath.row]
         }
+    }
+    
+    @IBAction func unwindToList(segue : UIStoryboardSegue) {
+        guard segue.identifier == "SaveUnwind",
+            let sourceViewController = segue.source as? AthleteFormTableViewController,
+            let athlete = sourceViewController.athlete else { return }
+        
+        if let seletedRow = tableView.indexPathForSelectedRow {
+            athletes[seletedRow.row] = athlete
+            tableView.reloadRows(at: [seletedRow], with: .none)
+        } else {
+            let newIndexPath = IndexPath(row: athletes.count, section: 0)
+            athletes.append(athlete)
+            tableView.insertRows(at: [newIndexPath], with: .automatic)
+        }
+         
+        
     }
     
     

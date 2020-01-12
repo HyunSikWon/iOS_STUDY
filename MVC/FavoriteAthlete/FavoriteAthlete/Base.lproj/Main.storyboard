@@ -63,7 +63,7 @@
         <!--Athlete Form-->
         <scene sceneID="ton-kg-rbs">
             <objects>
-                <tableViewController id="Pgk-KD-kpf" customClass="AthleteFormViewController" customModule="FavoriteAthlete" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="Pgk-KD-kpf" customClass="AthleteFormTableViewController" customModule="FavoriteAthlete" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="Q0M-8H-rGb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -176,8 +176,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Athlete Form" id="Jow-Qf-Vk9">
-                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="KRB-2C-8Oo"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="7cb-Xl-ef3"/>
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="cancel" id="KRB-2C-8Oo">
+                            <connections>
+                                <segue destination="zfj-DQ-mI3" kind="unwind" unwindAction="unwindToListWithSegue:" id="Wyo-Ac-2U0"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="7cb-Xl-ef3">
+                            <connections>
+                                <segue destination="zfj-DQ-mI3" kind="unwind" identifier="SaveUnwind" unwindAction="unwindToListWithSegue:" id="5zp-Ee-MRN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="ageTextField" destination="DxF-dE-rkA" id="b14-Ee-9sl"/>
@@ -187,6 +195,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g4N-1l-DAM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="zfj-DQ-mI3" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2224.6376811594205" y="173.4375"/>
         </scene>
@@ -224,10 +233,10 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aJ1-dQ-fzR" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1314.4927536231885" y="173.4375"/>
+            <point key="canvasLocation" x="1306" y="173"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="0Yv-ch-tai"/>
+        <segue reference="DaP-mh-y3V"/>
     </inferredMetricsTieBreakers>
 </document>

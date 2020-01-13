@@ -90,19 +90,6 @@ class EmojiTableViewController: UITableViewController {
         }
     }
     
-    @IBAction func unwindToEmojiTableViewController(segue : UIStoryboardSegue) {
-        guard segue.identifier == "saveUnwind", // save가 아니라 cancel이면 그냥 return
-            let sourceViewController = segue.source as? AddEditEmojiTableViewController,
-            let emoji = sourceViewController.emoji else { return }
-        
-        // 기존 row 수정
-        if let selectedRow = tableView.indexPathForSelectedRow {
-            emojis[selectedRow.row] = emoji
-            tableView.reloadRows(at: [selectedRow], with: .none)
-            
-        }
-    }
-    
     @IBAction func unwindToEmojiTableView(segue: UIStoryboardSegue) {
         guard segue.identifier == "saveUnwind",
             let sourceViewController = segue.source as? AddEditEmojiTableViewController,

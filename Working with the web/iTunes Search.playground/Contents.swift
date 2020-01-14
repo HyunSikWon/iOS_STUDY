@@ -1,7 +1,7 @@
 import UIKit
 import PlaygroundSupport
-
 PlaygroundPage.current.needsIndefiniteExecution = true
+
 
 extension URL {
     func withQueries(_ queries: [String: String]) -> URL? {

@@ -13,30 +13,16 @@ extension URL {
     }
 }
 
-// MARK: - 실습1
-//let url = URL(tring: "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")!
-//
-//let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-//    if let data = data,
-//        let string = String(data: data, encoding: .utf8){
-//
-//        print(string)
-//
-//    }
-//    PlaygroundPage.current.finishExecution()
-//}
-//
-//task.resume()
+let baseURL = URL(string: "https://itunes.apple.com/search")!
 
-// MARK: - 실습2
-let baseURL = URL(string: "https://api.nasa.gov/planetary/apod")!
-
-let query: [String:String] = [
-    "api_key" : "DEMO_KEY",
-    "date" : "2011-07-13",
+let query: [String: String] = [
+    "term" : "yerin+baek",
+    "media": "music",
+    "entity":"album"
 ]
 
 let url = baseURL.withQueries(query)!
+
 let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
     if let data = data,
         let string = String(data: data, encoding: .utf8){
@@ -46,6 +32,3 @@ let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
 }
 
 task.resume()
-
-
-

@@ -35,8 +35,8 @@
    - [Apple Edu 교재](https://github.com/HyunSikWon/iOS_STUDY/tree/master/ScrollView/ScrollingForm/ScrollingForm)
    - [Apple Edu 교재 - Challenge ](https://github.com/HyunSikWon/iOS_STUDY/tree/master/ScrollView/ScrollingFrom-Challenge/ScrollingFrom-Challenge)
    
-### [**Saving Data**]()
-   - [Saving Data 요약, 정리]
+### [**Saving Data**](https://github.com/HyunSikWon/iOS_STUDY/tree/master/Saving%20Data)
+   - [Saving Data 요약, 정리](https://github.com/HyunSikWon/iOS_STUDY/blob/master/Saving%20Data/Saving%20Data.md)
    - [Apple Edu 교재](https://github.com/HyunSikWon/iOS_STUDY/blob/master/Saving%20Data/PersistencePractice.playground/Contents.swift)
    - [Apple Edu 교재 - LAB](https://github.com/HyunSikWon/iOS_STUDY/tree/master/MVC/FavoriteAthlete/FavoriteAthlete) - MVC에서 실습한 FavoriteAthlete에 적용 
 

@@ -14,7 +14,7 @@ extension URL {
 }
 
 // MARK: - 실습1
-//let url = URL(tring: "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")!
+//let url = URL(string: "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")!
 //
 //let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
 //    if let data = data,
@@ -29,23 +29,110 @@ extension URL {
 //task.resume()
 
 // MARK: - 실습2
-let baseURL = URL(string: "https://api.nasa.gov/planetary/apod")!
+//let baseURL = URL(string: "https://api.nasa.gov/planetary/apod")!
+//
+//let query: [String:String] = [
+//    "api_key" : "DEMO_KEY",
+//    "date" : "2011-07-13",
+//]
+//
+//let url = baseURL.withQueries(query)!
+//let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+//    if let data = data,
+//        let string = String(data: data, encoding: .utf8){
+//        print(string)
+//    }
+//    PlaygroundPage.current.finishExecution()
+//}
+//
+//task.resume()
 
-let query: [String:String] = [
-    "api_key" : "DEMO_KEY",
-    "date" : "2011-07-13",
-]
+// MARK: - 실습3
+//let baseURL = URL(string: "https://api.nasa.gov/planetary/apod")!
+//
+//let query: [String:String] = [
+//    "api_key" : "DEMO_KEY",
+//    "date" : "2011-07-13",
+//]
+//
+//let url = baseURL.withQueries(query)!
+//let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+//    let jsonDecoder = JSONDecoder()
+//    if let data = data,
+//        let photoDictionary = try? jsonDecoder.decode([String: String].self, from: data){
+//        print(photoDictionary)
+//    }
+//    PlaygroundPage.current.finishExecution()
+//
+//}
+//
+//task.resume()
 
-let url = baseURL.withQueries(query)!
-let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
-    if let data = data,
-        let string = String(data: data, encoding: .utf8){
-        print(string)
+// MARK: - 실습4
+
+struct PhotoInfo: Codable {
+    var title: String
+    var description: String
+    var url: URL
+    var copyright: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case title
+        case description = "explanation"
+        case url
+        case copyright
     }
-    PlaygroundPage.current.finishExecution()
+    
+    init(from decoder: Decoder) throws {
+        let valueContainer = try decoder.container(keyedBy: CodingKeys.self)
+        self.title = try valueContainer.decode(String.self, forKey: .title)
+        self.description = try valueContainer.decode(String.self, forKey: .description)
+        self.url = try valueContainer.decode(URL.self, forKey: .url)
+        self.copyright = try valueContainer.decode(String.self, forKey: .copyright)
+        
+    }
+    
 }
 
-task.resume()
+struct Report: Codable {
+    let creationDate: Date
+    let profileID: String
+    let readCount: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case creationDate = "report_date"
+        case profileID = "profile_id"
+        case readCount = "read_count"
+    }
+}
+
+func fetchPhotoInfo(completion: @escaping (PhotoInfo?) -> Void) {
+    let baseURL = URL(string: "https://api.nasa.gov/planetary/apod")!
+    let query: [String:String] = [
+        "api_key" : "DEMO_KEY"
+    ]
+
+    let url = baseURL.withQueries(query)!
+    let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+        let jsonDecoder = JSONDecoder()
+        if let data = data,
+            let photoInfo = try? jsonDecoder.decode(PhotoInfo.self, from: data) {
+            completion(photoInfo)
+        } else {
+            print("Either no data was returned, or data was not properly decoded")
+            completion(nil)
+        }
+        
+        PlaygroundPage.current.finishExecution()
+    }
+
+    task.resume()
+}
+
+fetchPhotoInfo { (fetchedInfo) in
+    print(fetchedInfo)
+}
+
 
 
 

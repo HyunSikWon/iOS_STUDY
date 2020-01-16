@@ -1,7 +1,8 @@
 import UIKit
-import PlaygroundSupport
-
+import PlaygroundSupport // playground don't support asynchronous code.
+//They are designed to execute code on a single queue. running the code from the top to bottom.
 PlaygroundPage.current.needsIndefiniteExecution = true
+// The line you just added enables the playground to wait for the network request to finish and run the completion handler
 
 extension URL {
     func withQueries(_ queries: [String: String]) -> URL? {
@@ -23,7 +24,7 @@ extension URL {
 //        print(string)
 //
 //    }
-//    PlaygroundPage.current.finishExecution()
+//    PlaygroundPage.current.finishExecution() // That's when you know the request is finish and the playground can stop running
 //}
 //
 //task.resume()

@@ -44,7 +44,7 @@ struct StoreItem: Codable {
     var collection: String
     
     enum CodingKeys: String, CodingKey {
-        case kind
+        case kind = "collectionType"
         case artist = "artistName"
         case track = "trackName"
         case collection = "collectionName"
@@ -64,7 +64,6 @@ struct StoreItems: Codable {
     let results: [StoreItem]
 }
 
-
 let query: [String: String] = [
     "term" : "yerin+baek",
     "media": "music",
@@ -78,7 +77,6 @@ func fetchItems(matching query: [String: String], completion: @escaping ([StoreI
         completion(nil)
         print("Unable to build URL with supplied queries")
         return
-
     }
 
     let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -97,6 +95,6 @@ func fetchItems(matching query: [String: String], completion: @escaping ([StoreI
     task.resume()
 }
 
-fetchItems(matching: query) { (storeItems) in
-   print(storeItems)
+fetchItems(matching: query) { (fetchedItems) in
+    print(fetchedItems)
 }

@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     @IBOutlet var descriptionLabel: UILabel!
     @IBOutlet var copyrightLabel: UILabel!
     @IBOutlet var imageView: UIImageView!
+    @IBOutlet var activityIndicator: UIActivityIndicatorView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +23,7 @@ class ViewController: UIViewController {
         
         descriptionLabel.text = ""
         copyrightLabel.text = ""
-        
+        activityIndicator?.startAnimating()
         photoInfoController.fetchPhotoInfo { (photoInfo) in
             if let photoInfo = photoInfo {
                 self.updateUI(with: photoInfo)
@@ -45,7 +46,7 @@ class ViewController: UIViewController {
                 } else {
                     self.copyrightLabel.isHidden = true
                 }
-
+                 self.activityIndicator?.stopAnimating()
             }
         }
         task.resume()

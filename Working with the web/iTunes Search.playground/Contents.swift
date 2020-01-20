@@ -40,23 +40,22 @@ extension URL {
 struct StoreItem: Codable {
     var kind: String
     var artist: String
-    var track: String
-    var collection: String
+    var albumName: String
+    var copyright: String?
     
     enum CodingKeys: String, CodingKey {
         case kind = "collectionType"
         case artist = "artistName"
-        case track = "trackName"
-        case collection = "collectionName"
+        case albumName = "collectionName"
+        case copyright = "copyright"
     }
     
     init(from decoder: Decoder) throws {
         let valueContainer = try decoder.container(keyedBy: CodingKeys.self)
-        kind.self = try valueContainer.decode(String.self, forKey: .kind)
-        artist.self = try valueContainer.decode(String.self, forKey: .artist)
-        track.self = try valueContainer.decode(String.self, forKey: .track)
-        collection.self = try valueContainer.decode(String.self, forKey: .collection)
-        
+        self.kind = try valueContainer.decode(String.self, forKey: .kind)
+        self.artist = try valueContainer.decode(String.self, forKey: .artist)
+        self.albumName = try valueContainer.decode(String.self, forKey: .albumName)
+        self.copyright = try valueContainer.decode(String.self, forKey: .copyright)
     }
 }
 
@@ -70,15 +69,16 @@ let query: [String: String] = [
     "entity":"album",
 ]
 
+
 func fetchItems(matching query: [String: String], completion: @escaping ([StoreItem]?) -> Void) {
     let baseURL = URL(string: "https://itunes.apple.com/search?")!
-
+    
     guard let url = baseURL.withQueries(query) else {
         completion(nil)
         print("Unable to build URL with supplied queries")
         return
     }
-
+    
     let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
         let jsonDecoder = JSONDecoder()
         if let data = data,
@@ -91,10 +91,15 @@ func fetchItems(matching query: [String: String], completion: @escaping ([StoreI
         }
         PlaygroundPage.current.finishExecution()
     }
-
+    
     task.resume()
 }
 
 fetchItems(matching: query) { (fetchedItems) in
-    print(fetchedItems)
+    if let fetchedItems = fetchedItems {
+        for fetchedItem in fetchedItems {
+            print(fetchedItem)
+        }
+    }
+    
 }

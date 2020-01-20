@@ -45,6 +45,7 @@
    - [Apple Edu 교재 - HTTP and URL Session, Decoding JSON](https://github.com/HyunSikWon/iOS_STUDY/blob/master/Working%20with%20the%20web/Working%20with%20the%20web.playground/Contents.swift)
    - [Apple Edu 교재 - Concurrency](https://github.com/HyunSikWon/iOS_STUDY/tree/master/Working%20with%20the%20web/SpacePhoto/SpacePhoto)
    - [Apple Edu 교재 - LAB](https://github.com/HyunSikWon/iOS_STUDY/blob/master/Working%20with%20the%20web/iTunes%20Search.playground/Contents.swift)
+   - [Apple Edu 교재 - LAB2](https://github.com/HyunSikWon/iOS_STUDY/tree/master/Working%20with%20the%20web/iTunesSearch/iTunesSearch)
 
    
 

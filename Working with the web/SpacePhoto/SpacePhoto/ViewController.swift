@@ -20,7 +20,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
         descriptionLabel.text = ""
         copyrightLabel.text = ""
         activityIndicator?.startAnimating()
@@ -32,7 +31,6 @@ class ViewController: UIViewController {
     }
     
     func updateUI(with photoInfo: PhotoInfo) {
-//        guard let url = photoInfo.url.withHTTPS() else { return }
         
         let task = URLSession.shared.dataTask(with: photoInfo.url) { (data, response, error) in
             guard let data = data,

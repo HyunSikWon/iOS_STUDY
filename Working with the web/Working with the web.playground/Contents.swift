@@ -15,6 +15,7 @@ extension URL {
 }
 
 // MARK: - 실습1
+
 //let url = URL(string: "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY")!
 //
 //let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
@@ -30,6 +31,7 @@ extension URL {
 //task.resume()
 
 // MARK: - 실습2
+
 //let baseURL = URL(string: "https://api.nasa.gov/planetary/apod")!
 //
 //let query: [String:String] = [
@@ -49,6 +51,7 @@ extension URL {
 //task.resume()
 
 // MARK: - 실습3
+
 //let baseURL = URL(string: "https://api.nasa.gov/planetary/apod")!
 //
 //let query: [String:String] = [

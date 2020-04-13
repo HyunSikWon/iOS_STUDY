@@ -15,12 +15,11 @@ class StoreItemController {
         let baseURL = URL(string: "https://itunes.apple.com/search?")!
         
         guard let url = baseURL.withQueries(query) else {
-            
             completion(nil)
             print("Unable to build URL with supplied queries.")
             return
         }
-        print(url)
+
         let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
             
             if let data = data,
@@ -28,12 +27,11 @@ class StoreItemController {
                 let json = rawJSON as? [String: Any],
                 let resultsArray = json["results"] as? [[String: Any]] {
                 
-                let storeItems = resultsArray.flatMap { StoreItem(json: $0) }
+                let storeItems = resultsArray.compactMap { StoreItem(json: $0) }
                 completion(storeItems)
                 
             } else {
                 print("Either no data was returned, or data was not serialized.")
-                
                 completion(nil)
                 return
             }

@@ -3,20 +3,15 @@ import UIKit
 
 class StoreItemListTableViewController: UITableViewController {
     
+    
     @IBOutlet var searchBar: UISearchBar!
     @IBOutlet var filterSegmentedControl: UISegmentedControl!
     let storeItemController = StoreItemController()
-    
-    
-    // add item controller property
-    
     var items: [StoreItem] = []
-    
     let queryOptions = ["movie", "music", "software", "ebook"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     func fetchMatchingItems() {
@@ -28,12 +23,12 @@ class StoreItemListTableViewController: UITableViewController {
         let mediaType = queryOptions[filterSegmentedControl.selectedSegmentIndex]
         
         if !searchTerm.isEmpty {
-            
             // set up query dictionary
             let query: [String: String] = [
                 "term" : searchTerm,
                 "media" : mediaType
             ]
+            
             // use the item controller to fetch items
             storeItemController.fetchItems(matching: query) { (fetchedItems) in
                 if let items = fetchedItems {
@@ -49,15 +44,13 @@ class StoreItemListTableViewController: UITableViewController {
             }
         }
     }
+    
     func configure(cell: UITableViewCell, forItemAt indexPath: IndexPath) {
         
         let item = items[indexPath.row]
         
         cell.textLabel?.text = item.name
-        // set label to the item's name
         cell.detailTextLabel?.text = item.artist
-        // set detail label to the item's subtitle
-        // reset the image view to the gray image
         
         let task = URLSession.shared.dataTask(with: item.artworkURL) { (data, response, error) in
             guard let data = data,
@@ -68,14 +61,10 @@ class StoreItemListTableViewController: UITableViewController {
             
         }
         task.resume()
-        // initialize a network task to fetch the item's artwork
-        // if successful, use the main queue capture the cell, to initialize a UIImage, and set the cell's image view's image to the
-        // resume the task
         
     }
     
     @IBAction func filterOptionUpdated(_ sender: UISegmentedControl) {
-        
         fetchMatchingItems()
     }
     
@@ -97,15 +86,12 @@ class StoreItemListTableViewController: UITableViewController {
     // MARK: - Table view delegate
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
         tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 
 extension StoreItemListTableViewController: UISearchBarDelegate {
-    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
         fetchMatchingItems()
         searchBar.resignFirstResponder()
     }

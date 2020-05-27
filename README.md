@@ -1,13 +1,4 @@
-## App Development with Swift[Apple Education]
-
-### Index
-- [Segues an Navigation Controllers](#Segues-and-Navigation-Controllers)
-- [Tab Bar Controllers](#Tab-Bar-Controllers)
-- [View Controller Life Cycle](#View-Controller-Life-Cycle)
-- [Table View](#Table-View)
-- [Scroll View](#Scroll-View)
-- [Saving Data](#Saving-Data)
-- [Working with the Web](#Working-with-the-Web)
+## iOS 개발을 위한 공부 저장소 입니다.
 
 ---
 ### [**Segues and Navigation Controllers**](https://github.com/HyunSikWon/iOS_STUDY/tree/master/Segues%20and%20Navigation%20Controllers)

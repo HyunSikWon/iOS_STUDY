@@ -20,7 +20,7 @@ class ViewController: UIViewController {
     
     lazy var yourView: UIView = {
         let v = UIView()
-        v.backgroundColor = .red
+        v.backgroundColor = .blue
         v.translatesAutoresizingMaskIntoConstraints = false
         return v
         

@@ -61,10 +61,10 @@
 		6881F3B11E66032600E14215 /* iTunesSearch */ = {
 			isa = PBXGroup;
 			children = (
+				7E5084BA23D576AE00B5F19E /* URL+Helpers.swift */,
 				6881F3C41E66033D00E14215 /* Main.storyboard */,
 				6881F3C81E66034A00E14215 /* StoreItemListTableViewController.swift */,
 				7E078CB123D57250000F481F /* StoreItem.swift */,
-				7E5084BA23D576AE00B5F19E /* URL+Helpers.swift */,
 				7E5084BC23D576D600B5F19E /* StoreItemController.swift */,
 				6881F3B91E66032600E14215 /* Assets.xcassets */,
 				6881F3CE1E66480200E14215 /* iTunesSearch.playground */,

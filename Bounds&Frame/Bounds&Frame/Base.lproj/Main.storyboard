@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Bounds_Frame" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="400" translatesAutoresizingMaskIntoConstraints="NO" id="JPJ-Hb-qqc">
+                                <rect key="frame" x="18" y="549" width="376" height="31"/>
+                                <connections>
+                                    <action selector="frameSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="6ph-Nc-3Zc"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="400" translatesAutoresizingMaskIntoConstraints="NO" id="tOP-pV-QFx">
+                                <rect key="frame" x="19" y="630" width="376" height="31"/>
+                                <connections>
+                                    <action selector="boundsSliderChanged:" destination="BYZ-38-t0r" eventType="valueChanged" id="BC1-k8-sKp"/>
+                                </connections>
+                            </slider>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Container View Frame x = " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Py5-3Z-GoX">
+                                <rect key="frame" x="20" y="522" width="201" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Container View Bounds x = " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DN8-Lf-8kU">
+                                <rect key="frame" x="20" y="601" width="211" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gZs-by-Oii">
+                                <rect key="frame" x="37" y="60" width="278" height="355"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p1P-DK-pov">
+                                        <rect key="frame" x="30" y="70" width="123" height="119"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemIndigoColor" red="0.34509803919999998" green="0.33725490200000002" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JPJ-Hb-qqc" secondAttribute="trailing" constant="22" id="02x-s6-zWm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="Py5-3Z-GoX" secondAttribute="trailing" constant="193" id="1fi-M7-cRo"/>
+                            <constraint firstItem="DN8-Lf-8kU" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="DHw-cg-OdN"/>
+                            <constraint firstItem="tOP-pV-QFx" firstAttribute="top" secondItem="DN8-Lf-8kU" secondAttribute="bottom" constant="8" id="Hz3-eU-IvK"/>
+                            <constraint firstItem="DN8-Lf-8kU" firstAttribute="top" secondItem="JPJ-Hb-qqc" secondAttribute="bottom" constant="22" id="LWs-yp-bcv"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="tOP-pV-QFx" secondAttribute="bottom" constant="202" id="R9h-KB-Md0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="tOP-pV-QFx" secondAttribute="trailing" constant="21" id="RMl-gz-eJi"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" relation="lessThanOrEqual" secondItem="DN8-Lf-8kU" secondAttribute="trailing" constant="183" id="VON-Jh-ndK"/>
+                            <constraint firstItem="JPJ-Hb-qqc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VtO-Dl-UhE"/>
+                            <constraint firstItem="Py5-3Z-GoX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aeX-YO-dg2"/>
+                            <constraint firstItem="tOP-pV-QFx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21" id="eZO-dp-nZ4"/>
+                            <constraint firstItem="JPJ-Hb-qqc" firstAttribute="top" secondItem="Py5-3Z-GoX" secondAttribute="bottom" constant="6" id="ord-68-O1T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="boundsSlider" destination="tOP-pV-QFx" id="ZPO-oE-rjk"/>
+                        <outlet property="containerView" destination="gZs-by-Oii" id="uE7-9s-VTh"/>
+                        <outlet property="containerViewBoundsXLabel" destination="DN8-Lf-8kU" id="PkC-Bu-kl8"/>
+                        <outlet property="containerViewFrameXLabel" destination="Py5-3Z-GoX" id="ekb-fg-g3U"/>
+                        <outlet property="frameSlider" destination="JPJ-Hb-qqc" id="Qa8-iy-aFW"/>
+                        <outlet property="subView" destination="p1P-DK-pov" id="9R5-Rg-7LY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-204.34782608695653" y="-58.258928571428569"/>
+        </scene>
+    </scenes>
+</document>

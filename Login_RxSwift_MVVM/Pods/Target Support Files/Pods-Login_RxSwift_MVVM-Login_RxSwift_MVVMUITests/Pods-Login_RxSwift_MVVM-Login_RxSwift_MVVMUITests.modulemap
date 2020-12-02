@@ -1,0 +1,6 @@
+framework module Pods_Login_RxSwift_MVVM_Login_RxSwift_MVVMUITests {
+  umbrella header "Pods-Login_RxSwift_MVVM-Login_RxSwift_MVVMUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

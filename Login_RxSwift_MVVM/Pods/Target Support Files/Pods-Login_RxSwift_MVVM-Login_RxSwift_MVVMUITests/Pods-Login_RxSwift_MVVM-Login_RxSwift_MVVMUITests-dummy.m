@@ -1,0 +1,5 @@
+#import <Foundation/Foundation.h>
+@interface PodsDummy_Pods_Login_RxSwift_MVVM_Login_RxSwift_MVVMUITests : NSObject
+@end
+@implementation PodsDummy_Pods_Login_RxSwift_MVVM_Login_RxSwift_MVVMUITests
+@end
